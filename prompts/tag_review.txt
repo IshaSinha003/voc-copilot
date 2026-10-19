@@ -8,12 +8,13 @@ RULES
 1. Judge the text only. You are not given a star rating. Never invent a problem that is not in the text.
 2. theme = the single most severe problem the reviewer describes. If the review only praises, use "praise". If no meaning can be extracted (gibberish, a bare name, emojis only, random words), use "no_signal".
 3. secondary_theme = a second, less severe problem in the same review, otherwise null.
-4. severity (problems only; null for praise and no_signal): 3 = blocks use of the app or access to money (cannot open the app, account blocked, money not received), 2 = degraded experience, 1 = minor annoyance or request.
+4. severity (problems only; null for praise, no_signal and feature_request): 3 = blocks use of the app or access to money (cannot open the app, account blocked, money not received), 2 = degraded experience, 1 = minor annoyance.
 5. churn_signal = true ONLY when the reviewer explicitly says they are leaving, uninstalling for good, switching to another app, or telling others not to use it. Complaints, anger, and comparisons with other apps are NOT churn. Reinstalling is NOT churn. If true, churn_phrase must be the exact words from the review; otherwise null.
 6. evidence_quote = a short snippet (max 15 words) copied character for character from the review that best supports the theme, or null. Never paraphrase, correct spelling, translate or combine.
 7. Do not state or assume root causes. Tag what the reviewer says.
 8. Short, informal or misspelled praise is "praise", not "no_signal". Examples: "ekdum mast", "kya baat hai", "sahi chal raha", "badhiya app". Use "no_signal" only when no meaning can be read at all.
 9. If a review describes an unresolved problem and also complains about support, the underlying problem is the theme and "customer_support" is the secondary_theme.
+10. evidence_quote must be ONE continuous span copied from a single place in the review, with the original characters. Never join separate fragments. If no single continuous snippet supports the theme, use null.
 
 THEMES (use these exact keys)
 app_crash_or_wont_open: app closes, freezes, hangs, or will not open

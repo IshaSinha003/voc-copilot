@@ -66,14 +66,19 @@ def tag_batch(client, batch, tries=3):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--set", choices=["eval", "all"], default="eval")
+    ap.add_argument("--set", choices=["eval", "holdout", "all"], default="eval")
     args = ap.parse_args()
 
     client = anthropic.Anthropic()
     reviews = json.load(open("data/reviews.json", encoding="utf-8"))
-    if args.set == "eval":
-        wanted = set(load_labels())
-        reviews = [r for r in reviews if r["id"] in wanted]
+    if args.set in ("eval", "holdout"):
+        pattern = "data/label*.csv" if args.set == "eval" else "data/holdout_labelled*.csv"
+        wanted = set(load_labels(pattern))
+        pool_path = Path("data/reviews_lowstar.json")
+        if pool_path.exists():
+            seen = {r["id"] for r in reviews}
+            reviews += [r for r in json.load(open(pool_path, encoding="utf-8")) if r["id"] not in seen]
+        reviews = [r for r in reviews if r["id"] in wanted]    
     print(f"Tagging {len(reviews)} reviews with {MODEL}")
 
     results = {}

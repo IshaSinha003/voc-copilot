@@ -2,8 +2,11 @@ import json
 
 from labels import load_labels
 
-labels = load_labels()
-tags = json.load(open("data/tags_eval.json", encoding="utf-8"))
+import sys
+SET = sys.argv[1] if len(sys.argv) > 1 else "eval"
+pattern = "data/label*.csv" if SET == "eval" else "data/holdout_labelled*.csv"
+labels = load_labels(pattern)
+tags = json.load(open(f"data/tags_{SET}.json", encoding="utf-8"))
 ids = [i for i in labels if i in tags]
 
 

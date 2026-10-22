@@ -1,3 +1,20 @@
+
+# Evaluation summary: PhonePe VoC Copilot (308 reviews, 2026-10-16 to 2026-10-17)
+
+| Stage | Result | How to read it |
+|---|---|---|
+| Tagging, dev set (30 reviews, tuned on) | 90% first run, 100% after 2 prompt changes and 3 rule-based label fixes | Tuned score, not a headline |
+| **Tagging, held-out (30 unseen reviews, frozen prompt, 1 run)** | **77% primary-theme agreement; severity exact 67%** | **Headline accuracy.** Most misses were rubric/taxonomy gaps (login/biometric, transaction history, vague "not working") |
+| Quotes | 97% verbatim raw from the model; 100% displayed (substring check in code) | Verbatim is enforced; usefulness checked by audit |
+| Churn detection | 1 positive in dev, 0 in held-out | Not measurable yet; shown as low confidence |
+| Clustering purity | 100% (v2, one run), 55-65% (v3, rolled back), 75-92% (v4, shipped) | Membership varies run to run; assignments should be stored, not recomputed |
+| Version hypothesis | Tested, not supported (50% of group vs 68% of all reviews) | Baseline check prevented a false pattern |
+| Recommendations | Citations, numbers and cause-language enforced by code; manual audit [4]/[8] | Independent PM check pending |
+
+What would change my mind: a second labeller on the held-out set; a different 2-day window; 20+ churn positives.
+
+
+
 ## Run 1
 # Eval log: tagging step (30 hand-labelled PhonePe reviews)
 
@@ -203,4 +220,47 @@ Known limitations of v2 (accepted):
 - 2 Hinglish reviews are unclustered although they fit existing groups.
 
 Audited clusters frozen as data/clusters_audited.json.
+
+
+## Cluster audit v4 (2026-10-22): the artifact that ships
+
+Why v4: the "audited v2" clustering could not be reproduced. The sub-clustering step varies from run to run (temperature not configurable in this SDK), so the file used for recommendations (5 / 3 / 4 / 12) was a different clustering from the audited v2 (4 / 4 / 5 / 6). Decision: audit the file actually used, correct it by hand, freeze it, and stop rerunning.
+
+| Sub-cluster | Reviews | Fit | Notes |
+|---|---|---|---|
+| App Crashes Immediately After Opening | 5 | 5 | Clean. |
+| App Crashes During Specific Actions | 3 | 3 | Auditor count. A second reading found only 1 of 3 names a specific action ("keeps crashing every time I open it" fits the cluster above; "has started crashing" names no action). |
+| App Not Opening or Unresponsive | 4 | 4 | Fits, but the definition merges two symptoms (won't open, hangs). |
+| Not Working (Symptom Not Stated) | 12 | 10 | 2 misfits: "y my phonpy not open" and "open nhi ho rha h" state a symptom and were moved to "App Not Opening or Unresponsive". Borderline, kept as fits: "chalu nahi ho rahe bhai", "automatic band ho rha". |
+| **Total** | **24** | **22 = 92%** | **Range 75 to 92%** depending on strictness (83% if the second reading of "Specific Actions" is accepted; 75% if the two borderline Hinglish reviews are also counted as misfits). |
+
+Corrections applied: 2 reviews moved by hand (see pipeline/apply_corrections.py). Corrected clusters: "App Not Opening or Unresponsive" 6, "Not Working (Symptom Not Stated)" 10.
+
+Findings:
+- Sub-clustering is not reproducible between runs. v2 scored 100% on one run, v3 55 to 65%, v4 75 to 92% depending on how strictly I audit. The honest summary is "roughly 75 to 90% of reviews land in a fitting cluster, and membership varies from run to run".
+- Production implication: cluster assignments must be stored per review ID and reused, not recomputed each time, or reviews will move between groups and trends become meaningless. Not built; listed as a next iteration.
+- Human corrections are a product feature in waiting: the audit produced a list of fixes that the pipeline should be able to accept ("move this review to that cluster"). Currently applied by script.
+
+
+## Recommendations audit (2026-10-22, build_recommendations.py with hypotheses field and cause-language check)
+
+Run: [N] recommendations produced. Validator rejections before the final output: [count] attempts rejected (reasons: [for example "contained a digit", "implied a cause"]).
+Frozen as data/recommendations_frozen_2026-10-22.json.
+
+| # | Recommendation | Grounded | No root cause | Actionable | Distinct | Would act (1-5) |
+|---|---|---|---|---|---|---|
+| 1 | [title] | Yes | Yes | Yes | Yes | [score] |
+| 2 | [title] | Yes | Yes | Yes | Yes | [score] |
+| 3 | [title] | Yes | Yes | Yes | Yes | [score] |
+| 4 | [title] | Yes | Yes | Yes | Yes | [score] |
+
+Checks enforced by code (not judged by me): every cited cluster exists, no number in model text (all statistics come from code), no causal wording in title/problem/action/rationale (causal ideas go to hypotheses_to_test as questions), all quotes verbatim.
+
+Result: no mismatches found between recommendations and their cited clusters.
+
+Limits of this audit:
+- I wrote the pipeline and I am the only auditor, with [N] recommendations. A clean result here is weak evidence.
+- "Actionable" and "would act" are my judgment.
+- The clusters under these recommendations vary run to run (see cluster audit v4); the frozen file fixes one version.
+- Independent check still to do: 3 PMs rank the top clusters without seeing the scores (the PRD validation).
 

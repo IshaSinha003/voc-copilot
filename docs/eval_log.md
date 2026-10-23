@@ -264,3 +264,18 @@ Limits of this audit:
 - The clusters under these recommendations vary run to run (see cluster audit v4); the frozen file fixes one version.
 - Independent check still to do: 3 PMs rank the top clusters without seeing the scores (the PRD validation).
 
+
+## Dashboard export review (2026-10-23)
+
+Found on reading data/dashboard_data.json before publishing:
+- Personal data: 1 review contained a full name; redacted in the export. 2 of the 3 review-list flags were false alarms ("Dear PhonePe Support Team").
+- Invisible zero-width characters in 1 review and 1 quote; decorated quote prefix on 1 quote. Export now strips both and re-checks every quote as a substring of the shown review text.
+- Wrong sentence in the export's limits text (said "one week's complaints" for a two-day sample): corrected.
+- Cause-check gap: my regex missed "root causes" (plural) and had no term for app versions. 3 texts affected (recs 1, 2, 4). Fixed by 5 human edits applied in the export (listed in the script); regex patched for future runs.
+- Rec 4 framed as "incoming payments" but only about 2 of its 6 reviews are incoming-money problems. Retitled "Payment Failures and Delays (mixed group)" and user_problem rewritten to say the group mixes problems.
+- Version note for rec 4 rests on too few versioned reviews: caveated as a question, not a finding.
+- Recs 1 to 3 describe one user problem (app not working, 24 of 63 problem reviews) in three pieces; dashboard groups them. Priority ranks the vaguest group first (29 vs 24); treated as tiers, not strict ranks.
+- Known tagging error (balance screenshot review counted as a crash) kept in the theme and flagged in the dashboard.
+- Eligible clusters without a recommendation (5) are listed with the reason: the model was limited to four per run.
+
+Lesson: automated checks catch what they were written to catch. A pass through the generated output by a person found 3 phrasing problems the validator missed. The cause-check is a floor, not a guarantee.

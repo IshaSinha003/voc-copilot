@@ -1,0 +1,1325 @@
+{
+  "meta": {
+    "generated": "2026-10-23",
+    "sample": {
+      "reviews": 308,
+      "from": "2026-10-16",
+      "to": "2026-10-17",
+      "problem_reviews": 63
+    },
+    "overview": {
+      "total_reviews": 308,
+      "problem_reviews": 63,
+      "praise": 186,
+      "no_signal": 59
+    }
+  },
+  "limits": [
+    "Sample of 308 Google Play reviews from 2026-10-16 to 2026-10-17 (two days): it shows what users complained about in those days, not long-term trends.",
+    "Sub-cluster membership varies between runs; the shown clustering was audited and hand-corrected.",
+    "Churn signals are rare in this sample, so churn findings are low confidence.",
+    "Reviews alone cannot say how many users are affected or why a problem happens."
+  ],
+  "reviews": [
+    {
+      "id": "710cfb5b-bf41-4f3a-9f41-297eff3319c5",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "phone pay not working properly. After open automatically closed.",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes Immediately After Opening",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "1930984f-271b-4fdf-91e5-00b6fb00c389",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "very poor app is not opening not working properly for few days back",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "576b4419-98cd-4604-9af2-2a21a0cd2061",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "not working in moto g55",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "a38d1529-7be2-4353-a02c-db49f8318428",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "this version is crashing after pressing proceed",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes During Specific Actions",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "1f2efad6-6f82-4370-a9b2-cf8095c67f41",
+      "date": "2026-10-17",
+      "rating": 5,
+      "text": "Phone pay balance screen shot problem please clear this problem",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false,
+      "note": "Known tagging error: this review is about a balance screenshot, not a crash."
+    },
+    {
+      "id": "c3c68704-a875-4a26-b130-db8b65409f60",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "i already uninstall nd freshly install the app. still same pbm continuous",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "fb228d6d-1a1a-49ad-a642-f99aab9eb8cb",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "its not working in my phone since 3 days..very poor result compare to other app",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "e7d2e52c-d84d-43ec-8739-2b63740dbac1",
+      "date": "2026-10-17",
+      "rating": 5,
+      "text": "chalu nahi ho rahe bhai",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "05c1bea6-d017-48de-a3ae-4a0561c612f5",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "before good working but 2 days not working this time open phonepe after automatic close",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes Immediately After Opening",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "167f6305-c5fd-4413-a331-00b690f8848b",
+      "date": "2026-10-17",
+      "rating": 3,
+      "text": "phone pe is hanging most of the time. does not work at all, please fix the 🪲",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "0fb6e2ff-b92f-4bfb-a009-9c82a44c5246",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "automatic band ho rha",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "85b21393-f64f-4d31-9b56-431b1ec6d21c",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "my phone pe app is not working 😡 check tha issues",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "1de2433b-a639-4639-b349-067656ce4c2e",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "phone pe can't open. what is the solution of the problem?",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "51759c3b-830e-46f3-a3fe-febfc2fc51b9",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "Very Disappointing Experience with PhonePe! The PhonePe app is automatically closing within just 2 seconds of opening. I am facing a lot of problems because I cannot even use the app properly for my daily payments and other important transactions. This is extremely frustrating, especially for a payment app that people rely on every day. Please fix this technical issue as soon as possible and provide a permanent solution.",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes Immediately After Opening",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "3eb24921-16b1-46dd-8dcb-7e03363d83db",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "The app has started crashing. I have no root I have the stock OS (only the bootloader is unlocked). It was working 2-3 days ago",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes During Specific Actions",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "f256da19-8af7-4792-810c-93f0429cc626",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "app keeps crashing every time I open it , what do I do?",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes During Specific Actions",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "d37a9cf5-a115-411c-9664-cafc9431ce0a",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "whenever i am opening the app it's automatically getting closed after clearing data and cache also it's not working properly same issue from past 7 days",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes Immediately After Opening",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "24021d56-d38c-4dec-a576-3be424c85c5d",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "crashes on startup",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Crashes Immediately After Opening",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "97914748-b9c1-451c-a84a-f4b237b04b75",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "this app is not working now",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "d92ad733-af70-4d4b-bd18-aec51b38f2d8",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "y my phonpy not open",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "a8b033e2-3311-4632-9af4-b00b5356f7be",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "open nhi ho rha h",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "3d75997c-af40-4e70-b340-21c231c45de4",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "hanging",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "a6e90e1a-d7a0-479a-9370-e00273f4de58",
+      "date": "2026-10-16",
+      "rating": 2,
+      "text": "this app not working in my mobile",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "a43110b8-2fa8-4789-b46e-ac43671d6a92",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "hey my dear phone pay team since one week I am unable to Open my phone pay application Only display the phone pay logo can you solve my problem",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "App Not Opening or Unresponsive",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "67ce47d6-ef03-475d-9ded-3bc917faaa78",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "phone pay not working in my phone",
+      "theme": "app_crash_or_wont_open",
+      "subcluster": "Not Working (Symptom Not Stated)",
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "633f162a-98da-490f-a434-3f25e2289b83",
+      "date": "2026-10-17",
+      "rating": 4,
+      "text": "PhonePe does not always provide reliable service, especially when making urgent payments and there is no cash in hand. UPI service providers must ensure that every payment is processed smoothly and reliably. Unfortunately, PhonePe has not always been able to meet this expectation. This is disappointing.",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "df098987-a9c7-48b1-866f-fe5d54a9bf4c",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "but the processing payment are not good",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "f0f3fcb5-8977-4ed7-b51f-bf42c0ea4fcf",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "worst, very bad yanha par cash back nehi milta payment mein problem he, mujhe mere ghar wale no payment Kiya to mujhe recieve hii nehi hua upar se inka koi helpline number bhi nehi hee jo bhi he use batt nehi ho parahi he",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "ab1e2004-13a5-4b2d-9d23-bf4a718a7cce",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "after adding UPI lite, all other payment methods fail. used to be a fine app now it's too cluttered.",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "b1e0402f-deb8-4eea-bf95-86f234d6a691",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "Subject: Issues regarding UPI Circle and account functionality Dear PhonePe Support Team, I am using the UPI Circle feature to manage family accounts, but I am facing the following major issues: Balance Check Issue: I am unable to check the account balance. Transaction History: When I send money by scanning a QR code, I cannot repeat the payment directly from the same transaction history. Incoming Payments: Money sent by others to my number/UPI ID is not reflecting properly.",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "3ae49296-177a-4a4c-8c6a-db1756be02db",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "waste of time and money late services 24 hours, 48 hours ,4-5 business days i have to pay my education fees today is last date and they are giving me these excuses who will be answerable for my loss my whole year depends on the exam whoose fees is stuck in there services who has the responsibility or anyone answerable for this i guess no just waste of time don't make such big apps if you can't make these small payment done Totally waste and also a -5 star for support team the useless one liers",
+      "theme": "payment_failed_or_delayed",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "c9c207b9-a726-4ba6-b7b7-663e0fe047ea",
+      "date": "2026-10-17",
+      "rating": 5,
+      "text": "my phone account block ho chuka use sahi kare please",
+      "theme": "account_blocked_or_kyc",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "c4c82776-1559-46c4-a98a-5935de7f547f",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "⭐☆☆☆☆ Very Poor Customer Support – PhonePe Account Not Unblocked My PhonePe account is still blocked, and the support team is not providing any proper resolution. They ask me to upload my PAN card, but then reject it by saying that it is not a valid address proof. Since when has a PAN card been considered an address proof? A PAN card is primarily an identity and tax document, not proof of address. I have repeatedly tried to complete their verification process and upload the required documents",
+      "theme": "account_blocked_or_kyc",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "4a8cfa13-96ae-4d67-88eb-3e0edac0a6c0",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "app got blocked without any reason and unable to receive or make payments",
+      "theme": "account_blocked_or_kyc",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "6eed159b-006a-4a45-a793-3cdbce44fabe",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "phonepe account unlock please",
+      "theme": "account_blocked_or_kyc",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "67aaaab9-dc5f-4574-b79f-939e242aeec6",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "bakwas app don't use this app , this app is cheater",
+      "theme": "trust_or_fraud_concern",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": true
+    },
+    {
+      "id": "d9c171d7-c611-4d54-ad45-f5c1e5881c14",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "froud app, , data not safe",
+      "theme": "trust_or_fraud_concern",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "6924882d-c2f8-44e3-964b-436e9d49e7c1",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "inse bada chor koi nahi hai",
+      "theme": "trust_or_fraud_concern",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "1c812bbe-76ea-4860-b3fb-a5ba0b23058a",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "not working properly",
+      "theme": "other",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "f77f7528-8f8e-46f9-960a-636a702ba079",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "history is not maintaining properly I mean it was not showing some of the transactions and it was hard to me to calculate to find weather I was given money or not especially for mobile recharge for others",
+      "theme": "other",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "06f4066a-b92d-47d6-bfdd-5618e7cffa06",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "Till 2025 the service was very fast but now in 2026 their services have become slow. Or what problems are you facing in this?",
+      "theme": "other",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "860f11fe-88eb-4a5d-8704-da8439602bed",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "phonepe automatic back",
+      "theme": "other",
+      "subcluster": null,
+      "severity": null,
+      "churn_signal": false
+    },
+    {
+      "id": "63d74d2f-481e-42ec-9e9a-904c57dcb809",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "what happened still not working please solved the problem I humbly request u thank u sir.",
+      "theme": "other",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "eb046d16-87a3-4f3e-bb5c-71b2460ee136",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "harassment.",
+      "theme": "other",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "3ff465a5-cc69-4aa3-86f8-deec21572203",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "Worst customer Care😡",
+      "theme": "customer_support",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "354118dc-ca6d-4bd0-9dc8-c4c113fe7757",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "wrost app ever. no customer support. on the browser click on raise a ticket, it verify your account with otp just to tell you go in app and click on ?, what the hell. morons why you make a otp verification to tell this useless option. and again in app no customer support relevant queries option show. chat bot didn't reply no option. at least a option should be their that a consumer can write a concern. and when you raise a ticket no one reply no solution done. poor customer service. wrost app",
+      "theme": "customer_support",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "c4c41498-5448-455f-9429-78ff77507701",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "Terrible support. No agents available for chat support or for call support.",
+      "theme": "customer_support",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "b97389d2-519f-4343-aa06-235d6582264a",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "not good service",
+      "theme": "customer_support",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "4c8159e2-61d0-4014-bc28-24e6e8d03feb",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "Customer Service Very Bed, Uneducated Employee",
+      "theme": "customer_support",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "8f27803d-a615-4e3a-9aa5-9fc35ba41461",
+      "date": "2026-10-17",
+      "rating": 3,
+      "text": "it takes lots of attempts to verify the device & link the bank account. same thing at the same time not facing in any other upi app like GPay",
+      "theme": "bank_linking_and_verification",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "eb842c22-2478-4d93-b21b-69300149e7c7",
+      "date": "2026-10-16",
+      "rating": 5,
+      "text": "which bank account link this app",
+      "theme": "bank_linking_and_verification",
+      "subcluster": null,
+      "severity": null,
+      "churn_signal": false
+    },
+    {
+      "id": "4902adc2-6a19-4e2d-9eeb-ae92d9c4f37b",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "Dear PhonePe Support Team, My name is [NAME], and I am facing an issue with my State Bank of India (SBI) bank account on the PhonePe app. Due to a technical issue, my SBI bank account was deregistered from PhonePe. Since then, I have been trying to add the same bank account again, but I am unable to do so.",
+      "theme": "bank_linking_and_verification",
+      "subcluster": null,
+      "severity": 3,
+      "churn_signal": false
+    },
+    {
+      "id": "ca961893-8bfc-4b0f-9a1a-ffb16bd5cecd",
+      "date": "2026-10-17",
+      "rating": 4,
+      "text": "I have not recieved any cashback from long time",
+      "theme": "cashback_and_rewards",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "83746ae6-3eaa-40d7-a210-c4aff5db7da4",
+      "date": "2026-10-16",
+      "rating": 3,
+      "text": "phonepe World's no-1 upi app iam very sad please give me cashback",
+      "theme": "cashback_and_rewards",
+      "subcluster": null,
+      "severity": 1,
+      "churn_signal": false
+    },
+    {
+      "id": "7493dedf-0141-4018-8320-e54d06683cd5",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "too many ad",
+      "theme": "ads_and_clutter",
+      "subcluster": null,
+      "severity": 1,
+      "churn_signal": false
+    },
+    {
+      "id": "161028ab-a2a7-4363-aab3-29de0a1b7450",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "unable to add my biometric for payments....every time auto disable and too many ads....",
+      "theme": "ads_and_clutter",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "23846d1b-7cef-4fc6-a36a-967973426aee",
+      "date": "2026-10-16",
+      "rating": 4,
+      "text": "good nice but you debit extra charges is not good",
+      "theme": "fees_and_charges",
+      "subcluster": null,
+      "severity": 1,
+      "churn_signal": false
+    },
+    {
+      "id": "f06d0b19-b9eb-4763-9c63-754db77a9a95",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "they charge extra use gpay friendly app",
+      "theme": "fees_and_charges",
+      "subcluster": null,
+      "severity": 1,
+      "churn_signal": false
+    },
+    {
+      "id": "aabd362b-5b12-46ae-bb0a-43ac7338925a",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "Tum log Service charge ke naam par mera 3,3 rupaye le le rahe ho.",
+      "theme": "fees_and_charges",
+      "subcluster": null,
+      "severity": 1,
+      "churn_signal": false
+    },
+    {
+      "id": "1f295024-bc58-4ae9-9c7c-72fc0ef6bb62",
+      "date": "2026-10-17",
+      "rating": 1,
+      "text": "apne aap subscribtion me pesa katta hai",
+      "theme": "unwanted_auto_debit",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "1eff9764-7705-4b4b-b53e-ed12cc7768d1",
+      "date": "2026-10-16",
+      "rating": 1,
+      "text": "unable to delete my user account data .. always showing error \"unable to process please try after again'",
+      "theme": "privacy_and_data_deletion",
+      "subcluster": null,
+      "severity": 2,
+      "churn_signal": false
+    },
+    {
+      "id": "66c857b4-42de-48a5-bf4a-59cd9e070112",
+      "date": "2026-10-16",
+      "rating": 4,
+      "text": "kafi details bharne parte hai jitna aata hai samne wale ko utne mai accept karo",
+      "theme": "feature_request",
+      "subcluster": null,
+      "severity": null,
+      "churn_signal": false
+    },
+    {
+      "id": "a00d6940-bf48-4c07-9c82-404711a78925",
+      "date": "2026-10-16",
+      "rating": 2,
+      "text": "we want chat delete option",
+      "theme": "feature_request",
+      "subcluster": null,
+      "severity": null,
+      "churn_signal": false
+    }
+  ],
+  "themes": [
+    {
+      "theme": "app_crash_or_wont_open",
+      "n": 25,
+      "mean_severity": 2.96,
+      "severity3_share": 0.96,
+      "churn_count": 0,
+      "priority": 74.0,
+      "quotes": [
+        {
+          "review_id": "a43110b8-2fa8-4789-b46e-ac43671d6a92",
+          "quote": "hey my dear phone pay team since one week I am unable to Open my phone pay application Only display the phone pay logo can you solve my problem",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "d37a9cf5-a115-411c-9664-cafc9431ce0a",
+          "quote": "whenever i am opening the app it's automatically getting closed after clearing data and cache also it's not working properly same issue from past 7 days",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "167f6305-c5fd-4413-a331-00b690f8848b",
+          "quote": "phone pe is hanging most of the time. does not work at all, please fix the 🪲",
+          "date": "2026-10-17"
+        }
+      ],
+      "subclusters": [
+        {
+          "name": "App Crashes Immediately After Opening",
+          "definition": "Users report the app automatically closes or crashes within seconds of opening it.",
+          "n": 5,
+          "mean_severity": 3.0,
+          "severity3_share": 1.0,
+          "churn_count": 0,
+          "quotes": [
+            {
+              "review_id": "d37a9cf5-a115-411c-9664-cafc9431ce0a",
+              "quote": "whenever i am opening the app it's automatically getting closed after clearing data and cache also it's not working properly same issue from past 7 days",
+              "date": "2026-10-16"
+            },
+            {
+              "review_id": "05c1bea6-d017-48de-a3ae-4a0561c612f5",
+              "quote": "before good working but 2 days not working this time open phonepe after automatic close",
+              "date": "2026-10-17"
+            },
+            {
+              "review_id": "51759c3b-830e-46f3-a3fe-febfc2fc51b9",
+              "quote": "The PhonePe app is automatically closing within just 2 seconds of opening.",
+              "date": "2026-10-16"
+            }
+          ],
+          "priority": 15.0
+        },
+        {
+          "name": "App Crashes During Specific Actions",
+          "definition": "Users report the app crashes when performing specific operations like pressing proceed or opening certain screens.",
+          "n": 3,
+          "mean_severity": 3.0,
+          "severity3_share": 1.0,
+          "churn_count": 0,
+          "quotes": [
+            {
+              "review_id": "f256da19-8af7-4792-810c-93f0429cc626",
+              "quote": "app keeps crashing every time I open it , what do I do?",
+              "date": "2026-10-16"
+            },
+            {
+              "review_id": "a38d1529-7be2-4353-a02c-db49f8318428",
+              "quote": "this version is crashing after pressing proceed",
+              "date": "2026-10-17"
+            },
+            {
+              "review_id": "3eb24921-16b1-46dd-8dcb-7e03363d83db",
+              "quote": "The app has started crashing.",
+              "date": "2026-10-16"
+            }
+          ],
+          "priority": 9.0
+        },
+        {
+          "name": "App Not Opening or Unresponsive",
+          "definition": "Users report the app will not open, is hanging, or is completely unresponsive when attempting to launch it.",
+          "n": 6,
+          "mean_severity": 3.0,
+          "severity3_share": 1.0,
+          "churn_count": 0,
+          "quotes": [
+            {
+              "review_id": "a43110b8-2fa8-4789-b46e-ac43671d6a92",
+              "quote": "hey my dear phone pay team since one week I am unable to Open my phone pay application Only display the phone pay logo can you solve my problem",
+              "date": "2026-10-16"
+            },
+            {
+              "review_id": "167f6305-c5fd-4413-a331-00b690f8848b",
+              "quote": "phone pe is hanging most of the time. does not work at all, please fix the 🪲",
+              "date": "2026-10-17"
+            },
+            {
+              "review_id": "1930984f-271b-4fdf-91e5-00b6fb00c389",
+              "quote": "very poor app is not opening not working properly for few days back",
+              "date": "2026-10-17"
+            }
+          ],
+          "priority": 18.0
+        },
+        {
+          "name": "Not Working (Symptom Not Stated)",
+          "definition": "Users report the app is not working without specifying a clear symptom or error.",
+          "n": 10,
+          "mean_severity": 2.9,
+          "severity3_share": 0.9,
+          "churn_count": 0,
+          "quotes": [
+            {
+              "review_id": "85b21393-f64f-4d31-9b56-431b1ec6d21c",
+              "quote": "my phone pe app is not working 😡 check tha issues",
+              "date": "2026-10-16"
+            },
+            {
+              "review_id": "fb228d6d-1a1a-49ad-a642-f99aab9eb8cb",
+              "quote": "its not working in my phone since 3 days..",
+              "date": "2026-10-17"
+            },
+            {
+              "review_id": "a6e90e1a-d7a0-479a-9370-e00273f4de58",
+              "quote": "this app not working in my mobile",
+              "date": "2026-10-16"
+            }
+          ],
+          "priority": 29.0
+        }
+      ]
+    },
+    {
+      "theme": "payment_failed_or_delayed",
+      "n": 6,
+      "mean_severity": 2.5,
+      "severity3_share": 0.5,
+      "churn_count": 0,
+      "priority": 15.0,
+      "quotes": [
+        {
+          "review_id": "b1e0402f-deb8-4eea-bf95-86f234d6a691",
+          "quote": "Incoming Payments: Money sent by others to my number/UPI ID is not reflecting properly.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "3ae49296-177a-4a4c-8c6a-db1756be02db",
+          "quote": "late services 24 hours, 48 hours ,4-5 business days",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "f0f3fcb5-8977-4ed7-b51f-bf42c0ea4fcf",
+          "quote": "mujhe recieve hii nehi hua",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "account_blocked_or_kyc",
+      "n": 4,
+      "mean_severity": 3.0,
+      "severity3_share": 1.0,
+      "churn_count": 0,
+      "priority": 12.0,
+      "quotes": [
+        {
+          "review_id": "c4c82776-1559-46c4-a98a-5935de7f547f",
+          "quote": "Very Poor Customer Support – PhonePe Account Not Unblocked My PhonePe account is still blocked, and the support team is not providing any proper resolution.",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "4a8cfa13-96ae-4d67-88eb-3e0edac0a6c0",
+          "quote": "app got blocked without any reason and unable to receive or make payments",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "c9c207b9-a726-4ba6-b7b7-663e0fe047ea",
+          "quote": "my phone account block ho chuka use sahi kare please",
+          "date": "2026-10-17"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "trust_or_fraud_concern",
+      "n": 3,
+      "mean_severity": 2.33,
+      "severity3_share": 0.33,
+      "churn_count": 1,
+      "priority": 12.0,
+      "quotes": [
+        {
+          "review_id": "d9c171d7-c611-4d54-ad45-f5c1e5881c14",
+          "quote": "froud app, , data not safe",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "67aaaab9-dc5f-4574-b79f-939e242aeec6",
+          "quote": "bakwas app don't use this app , this app is cheater",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "6924882d-c2f8-44e3-964b-436e9d49e7c1",
+          "quote": "inse bada chor koi nahi hai",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "other",
+      "n": 6,
+      "mean_severity": 1.83,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 11.0,
+      "quotes": [
+        {
+          "review_id": "f77f7528-8f8e-46f9-960a-636a702ba079",
+          "quote": "history is not maintaining properly I mean it was not showing some of the transactions and it was hard to me to calculate to find weather I was given money or not especially for mobile recharge for others",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "63d74d2f-481e-42ec-9e9a-904c57dcb809",
+          "quote": "what happened still not working please solved the problem I humbly request u thank u sir.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "06f4066a-b92d-47d6-bfdd-5618e7cffa06",
+          "quote": "Till 2025 the service was very fast but now in 2026 their services have become slow.",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "customer_support",
+      "n": 5,
+      "mean_severity": 2.0,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 10.0,
+      "quotes": [
+        {
+          "review_id": "354118dc-ca6d-4bd0-9dc8-c4c113fe7757",
+          "quote": "no customer support. on the browser click on raise a ticket, it verify your account with otp just to tell you go in app and click on ?",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "c4c41498-5448-455f-9429-78ff77507701",
+          "quote": "No agents available for chat support or for call support.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "4c8159e2-61d0-4014-bc28-24e6e8d03feb",
+          "quote": "Customer Service Very Bed, Uneducated Employee",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "bank_linking_and_verification",
+      "n": 3,
+      "mean_severity": 2.0,
+      "severity3_share": 0.33,
+      "churn_count": 0,
+      "priority": 6.0,
+      "quotes": [
+        {
+          "review_id": "4902adc2-6a19-4e2d-9eeb-ae92d9c4f37b",
+          "quote": "Since then, I have been trying to add the same bank account again, but I am unable to do so.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "8f27803d-a615-4e3a-9aa5-9fc35ba41461",
+          "quote": "it takes lots of attempts to verify the device & link the bank account.",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "eb842c22-2478-4d93-b21b-69300149e7c7",
+          "quote": "which bank account link this app",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "cashback_and_rewards",
+      "n": 2,
+      "mean_severity": 1.5,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 3.0,
+      "quotes": [
+        {
+          "review_id": "ca961893-8bfc-4b0f-9a1a-ffb16bd5cecd",
+          "quote": "I have not recieved any cashback from long time",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "83746ae6-3eaa-40d7-a210-c4aff5db7da4",
+          "quote": "phonepe World's no-1 upi app iam very sad please give me cashback",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "ads_and_clutter",
+      "n": 2,
+      "mean_severity": 1.5,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 3.0,
+      "quotes": [
+        {
+          "review_id": "161028ab-a2a7-4363-aab3-29de0a1b7450",
+          "quote": "every time auto disable and too many ads....",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "fees_and_charges",
+      "n": 3,
+      "mean_severity": 1.0,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 3.0,
+      "quotes": [
+        {
+          "review_id": "aabd362b-5b12-46ae-bb0a-43ac7338925a",
+          "quote": "Tum log Service charge ke naam par mera 3,3 rupaye le le rahe ho.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "23846d1b-7cef-4fc6-a36a-967973426aee",
+          "quote": "good nice but you debit extra charges is not good",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "f06d0b19-b9eb-4763-9c63-754db77a9a95",
+          "quote": "they charge extra use gpay friendly app",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "unwanted_auto_debit",
+      "n": 1,
+      "mean_severity": 2.0,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 2.0,
+      "quotes": [
+        {
+          "review_id": "1f295024-bc58-4ae9-9c7c-72fc0ef6bb62",
+          "quote": "apne aap subscribtion me pesa katta hai",
+          "date": "2026-10-17"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "privacy_and_data_deletion",
+      "n": 1,
+      "mean_severity": 2.0,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 2.0,
+      "quotes": [
+        {
+          "review_id": "1eff9764-7705-4b4b-b53e-ed12cc7768d1",
+          "quote": "unable to delete my user account data .. always showing error \"unable to process please try after again'",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    },
+    {
+      "theme": "feature_request",
+      "n": 2,
+      "mean_severity": 1.0,
+      "severity3_share": 0.0,
+      "churn_count": 0,
+      "priority": 2.0,
+      "quotes": [
+        {
+          "review_id": "66c857b4-42de-48a5-bf4a-59cd9e070112",
+          "quote": "kafi details bharne parte hai jitna aata hai samne wale ko utne mai accept karo",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "a00d6940-bf48-4c07-9c82-404711a78925",
+          "quote": "we want chat delete option",
+          "date": "2026-10-16"
+        }
+      ],
+      "subclusters": []
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "General App Malfunction Without Specific Details",
+      "kind": "add_diagnostics",
+      "user_problem": "Users report the app is not working but do not describe a specific symptom or error.",
+      "proposed_action": "Add an in-app prompt or support flow that asks users to describe what is not working when they encounter issues. Collect structured feedback on whether the problem is a crash, hang, error message, failed transaction, or other issue.",
+      "rationale": "A large group of users report malfunction without specifying the problem. This makes it impossible to tell whether the reports are about crashes, network problems, bugs or something else.",
+      "unknowns": "The actual symptom affecting these users. Whether the issues are crashes, hangs, failed transactions, errors, or feature unavailability. The scope and frequency of problems.",
+      "validation_step": "Review support tickets and in-app reports to see what specific issues users are experiencing when they say the app is not working. Correlate reports with crash analytics and error logs.",
+      "hypotheses_to_test": [
+        "Do non-specific complaint reports correlate with specific error codes or crash types in the backend logs?"
+      ],
+      "cited_units": [
+        "U4"
+      ],
+      "cited_names": [
+        "Not Working (Symptom Not Stated)"
+      ],
+      "evidence": {
+        "reviews": 10,
+        "mean_severity": 2.9,
+        "severity3_share": 0.9,
+        "churn_mentions": 0,
+        "priority": 29.0,
+        "version_notes": [
+          "not enough version data"
+        ]
+      },
+      "evidence_volume": "high",
+      "quotes": [
+        {
+          "review_id": "85b21393-f64f-4d31-9b56-431b1ec6d21c",
+          "quote": "my phone pe app is not working 😡 check tha issues",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "fb228d6d-1a1a-49ad-a642-f99aab9eb8cb",
+          "quote": "its not working in my phone since 3 days..",
+          "date": "2026-10-17"
+        }
+      ],
+      "themes": [
+        "app_crash_or_wont_open"
+      ],
+      "human_edits": [
+        "rationale"
+      ]
+    },
+    {
+      "title": "App Crashes on Launch or During Use",
+      "kind": "investigate",
+      "user_problem": "Users report the app crashes immediately after opening or during specific actions like pressing proceed or opening certain screens.",
+      "proposed_action": "Establish crash reporting to capture stack traces, affected screens, and device states. Prioritize investigating crash patterns on launch versus during specific operations.",
+      "rationale": "Multiple user groups report severe crashes that prevent app use entirely. The crashes occur in different scenarios (immediate launch versus during specific actions), which may be different problems that need to be investigated separately.",
+      "unknowns": "Which devices and app versions are affected. Whether the crashes occur on specific OS versions or device configurations. Whether crashes during launch differ from crashes during operations.",
+      "validation_step": "Check crash analytics to confirm the frequency and scope of launch crashes versus operation-specific crashes. Review support ticket volume for app crash complaints.",
+      "hypotheses_to_test": [
+        "Are crashes on launch correlated with specific initialization routines or cached data?",
+        "Do crashes during operations occur on particular screens or actions?"
+      ],
+      "cited_units": [
+        "U1",
+        "U2"
+      ],
+      "cited_names": [
+        "App Crashes Immediately After Opening",
+        "App Crashes During Specific Actions"
+      ],
+      "evidence": {
+        "reviews": 8,
+        "mean_severity": 3.0,
+        "severity3_share": 1.0,
+        "churn_mentions": 0,
+        "priority": 24.0,
+        "version_notes": [
+          "no evidence that the problem concentrates on one app version",
+          "not enough version data"
+        ]
+      },
+      "evidence_volume": "medium",
+      "quotes": [
+        {
+          "review_id": "d37a9cf5-a115-411c-9664-cafc9431ce0a",
+          "quote": "whenever i am opening the app it's automatically getting closed after clearing data and cache also it's not working properly same issue from past 7 days",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "05c1bea6-d017-48de-a3ae-4a0561c612f5",
+          "quote": "before good working but 2 days not working this time open phonepe after automatic close",
+          "date": "2026-10-17"
+        },
+        {
+          "review_id": "f256da19-8af7-4792-810c-93f0429cc626",
+          "quote": "app keeps crashing every time I open it , what do I do?",
+          "date": "2026-10-16"
+        }
+      ],
+      "themes": [
+        "app_crash_or_wont_open"
+      ],
+      "human_edits": [
+        "rationale"
+      ]
+    },
+    {
+      "title": "App Unresponsive or Fails to Launch",
+      "kind": "add_diagnostics",
+      "user_problem": "Users report the app hangs, is unresponsive, or will not open. Some see only the logo without the app launching.",
+      "proposed_action": "Add in-app diagnostics or a launch feedback prompt to understand whether the app freezes during startup, hangs indefinitely, or displays the logo without progressing. Capture device logs and initialization state.",
+      "rationale": "Users describe app hangs and launch failures but do not specify whether the issue is a freeze, timeout, or incomplete initialization. Without clarity on the symptom, a fix cannot be targeted effectively.",
+      "unknowns": "The exact failure mode: whether the app freezes, times out during startup, or encounters an error during initialization. Device types, OS versions, or connectivity conditions that correlate with the issue.",
+      "validation_step": "Add diagnostic telemetry to capture startup duration and termination points. Compare app logs from affected users with normal launch sequences.",
+      "hypotheses_to_test": [
+        "Does the hang occur during a specific initialization phase, such as authentication or network requests?",
+        "Is unresponsiveness correlated with insufficient device memory or slow network conditions?"
+      ],
+      "cited_units": [
+        "U3"
+      ],
+      "cited_names": [
+        "App Not Opening or Unresponsive"
+      ],
+      "evidence": {
+        "reviews": 6,
+        "mean_severity": 3.0,
+        "severity3_share": 1.0,
+        "churn_mentions": 0,
+        "priority": 18.0,
+        "version_notes": [
+          "not enough version data"
+        ]
+      },
+      "evidence_volume": "medium",
+      "quotes": [
+        {
+          "review_id": "a43110b8-2fa8-4789-b46e-ac43671d6a92",
+          "quote": "hey my dear phone pay team since one week I am unable to Open my phone pay application Only display the phone pay logo can you solve my problem",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "167f6305-c5fd-4413-a331-00b690f8848b",
+          "quote": "phone pe is hanging most of the time. does not work at all, please fix the 🪲",
+          "date": "2026-10-17"
+        }
+      ],
+      "themes": [
+        "app_crash_or_wont_open"
+      ],
+      "human_edits": []
+    },
+    {
+      "title": "Payment Failures and Delays (mixed group)",
+      "kind": "monitor",
+      "user_problem": "Users report payments that fail, arrive late or do not show up. The group mixes different problems: incoming money not reflecting, slow processing of payments made, and one report of other payment methods failing after UPI Lite was added.",
+      "proposed_action": "Monitor payment processing delays and non-receipt reports. Establish whether delays are widespread or isolated to specific transaction types.",
+      "rationale": "A moderate group of users report payment delays or failures, though severity is lower than app stability issues. The problem is specific enough to investigate but requires monitoring to determine scope and priority.",
+      "unknowns": "Whether delays are temporary or persistent. Which payment channels, amounts, or user segments are affected. Whether issues are on the app side or in backend payment processing.",
+      "validation_step": "Query payment processing logs to compare incoming payment delivery times against baseline. Check support tickets for patterns in affected accounts or transaction types.",
+      "hypotheses_to_test": [
+        "Are payment delays correlated with specific payment methods or UPI platforms?"
+      ],
+      "cited_units": [
+        "U5"
+      ],
+      "cited_names": [
+        "payment_failed_or_delayed"
+      ],
+      "evidence": {
+        "reviews": 6,
+        "mean_severity": 2.5,
+        "severity3_share": 0.5,
+        "churn_mentions": 0,
+        "priority": 15.0,
+        "version_notes": [
+          "Version concentration seen, but based on fewer than 10 reviews that state a version: a question to check, not a finding."
+        ]
+      },
+      "evidence_volume": "medium",
+      "quotes": [
+        {
+          "review_id": "b1e0402f-deb8-4eea-bf95-86f234d6a691",
+          "quote": "Incoming Payments: Money sent by others to my number/UPI ID is not reflecting properly.",
+          "date": "2026-10-16"
+        },
+        {
+          "review_id": "3ae49296-177a-4a4c-8c6a-db1756be02db",
+          "quote": "late services 24 hours, 48 hours ,4-5 business days",
+          "date": "2026-10-16"
+        }
+      ],
+      "themes": [
+        "payment_failed_or_delayed"
+      ],
+      "human_edits": [
+        "proposed_action",
+        "user_problem",
+        "title"
+      ]
+    }
+  ],
+  "not_recommended": [
+    {
+      "name": "account_blocked_or_kyc",
+      "reviews": 4,
+      "priority": 12.0,
+      "reason": "Eligible, but no recommendation was generated (the model was limited to four per run)."
+    },
+    {
+      "name": "trust_or_fraud_concern",
+      "reviews": 3,
+      "priority": 12.0,
+      "reason": "Eligible, but no recommendation was generated (the model was limited to four per run)."
+    },
+    {
+      "name": "customer_support",
+      "reviews": 5,
+      "priority": 10.0,
+      "reason": "Eligible, but no recommendation was generated (the model was limited to four per run)."
+    },
+    {
+      "name": "bank_linking_and_verification",
+      "reviews": 3,
+      "priority": 6.0,
+      "reason": "Eligible, but no recommendation was generated (the model was limited to four per run)."
+    },
+    {
+      "name": "fees_and_charges",
+      "reviews": 3,
+      "priority": 3.0,
+      "reason": "Eligible, but no recommendation was generated (the model was limited to four per run)."
+    }
+  ],
+  "weak_signals": [
+    {
+      "theme": "other",
+      "n": 6,
+      "reason": "excluded by rule"
+    },
+    {
+      "theme": "cashback_and_rewards",
+      "n": 2,
+      "reason": "excluded by rule"
+    },
+    {
+      "theme": "ads_and_clutter",
+      "n": 2,
+      "reason": "fewer than 3 reviews"
+    },
+    {
+      "theme": "unwanted_auto_debit",
+      "n": 1,
+      "reason": "fewer than 3 reviews"
+    },
+    {
+      "theme": "privacy_and_data_deletion",
+      "n": 1,
+      "reason": "fewer than 3 reviews"
+    },
+    {
+      "theme": "feature_request",
+      "n": 2,
+      "reason": "fewer than 3 reviews"
+    }
+  ]
+}

@@ -141,7 +141,7 @@ function render(){
   const g1n=g1.reduce((a,r)=>a+r.evidence.reviews,0);
   const pct=n=>Math.round(n/o.total_reviews*100)+"% of all reviews";
   $("#app").innerHTML=`
-<div class="top" id="top"><div><h1>Voice of Customer overview</h1><p class="lead">What PhonePe users complained about in the latest Google Play reviews. Every number is computed in code and every quote is verbatim.</p></div><span class="chip">Updated ${esc(m.generated||"")}</span></div>
+<div class="top" id="top"><div><h1>Voice of Customer overview</h1><p class="lead">What PhonePe users complained about in the latest Google Play reviews. Every number is computed in code and every quote is verbatim.</p></div><span class="chip">Updated latest</span></div>
 <div class="kpis"><div class="kpi"><small>Reviews analysed</small><b>${o.total_reviews}</b><small>Latest sample</small></div>
 <div class="kpi"><small>Describe a problem</small><b>${o.problem_reviews}</b><small>${pct(o.problem_reviews)}</small></div>
 <div class="kpi"><small>Praise only</small><b>${o.praise}</b><small>${pct(o.praise)}</small></div>

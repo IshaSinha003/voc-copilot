@@ -77,6 +77,9 @@ summary{cursor:pointer;color:var(--ac);margin:8px 0;font-size:14px}
 .q:hover{background:#ffffff0f}
 .chips span{display:inline-block;margin:0 6px 7px 0;background:#ffffff0f;border-radius:99px;padding:3px 13px;font-size:13px;color:var(--mu)}
 ul.lim{margin-left:20px;color:var(--mu)}ul.lim li{margin-bottom:6px}
+.pl{display:flex;align-items:flex-end;gap:6px;height:170px;margin:14px 0 8px}
+.pb{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;text-align:center}
+.pb i{display:block}.pb span{font-size:11px}
 .err{padding:24px;color:var(--amb)}
 button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
 @media(max-width:1020px){body{flex-direction:column}aside{width:100%;height:auto;position:sticky;top:0;z-index:5;background:var(--bg);border-right:0;border-bottom:1px solid var(--line);padding:10px 12px;display:flex;align-items:center;gap:12px}.brand{padding:0;white-space:nowrap;font-size:17px}.sub{display:none}nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}nav a{white-space:nowrap;margin:0;padding:8px 14px;font-size:14px}[id]{scroll-margin-top:72px}.grid{grid-template-columns:1fr}#reviews{position:static;max-height:none}#rlist{max-height:560px}main{padding:22px 16px 40px}h1{font-size:26px}}
@@ -138,7 +141,7 @@ function render(){
   const g1n=g1.reduce((a,r)=>a+r.evidence.reviews,0);
   const pct=n=>Math.round(n/o.total_reviews*100)+"% of all reviews";
   $("#app").innerHTML=`
-<div class="top" id="top"><div><h1>Voice of Customer overview</h1><p class="lead">What PhonePe users complained about in the latest Google Play reviews. Every number is computed in code and every quote is verbatim.</p></div><span class="chip">Latest reviews</span></div>
+<div class="top" id="top"><div><h1>Voice of Customer overview</h1><p class="lead">What PhonePe users complained about in the latest Google Play reviews. Every number is computed in code and every quote is verbatim.</p></div><span class="chip">Updated ${esc(m.generated||"")}</span></div>
 <div class="kpis"><div class="kpi"><small>Reviews analysed</small><b>${o.total_reviews}</b><small>Latest sample</small></div>
 <div class="kpi"><small>Describe a problem</small><b>${o.problem_reviews}</b><small>${pct(o.problem_reviews)}</small></div>
 <div class="kpi"><small>Praise only</small><b>${o.praise}</b><small>${pct(o.praise)}</small></div>
@@ -153,18 +156,33 @@ function render(){
 <div class="dn"><div class="donut" style="background:conic-gradient(${seg.join(",")})"><span>${tot}<small>problem reviews</small></span></div>
 <div class="lg">${D.themes.slice(0,6).map(t=>`<div><span class="dot" style="background:${t.color}"></span>${esc(nice(t.theme))} · ${t.n}</div>`).join("")}${D.themes.length>6?`<div class="mu"><span class="dot" style="background:${PAL[6]}"></span>${D.themes.length-6} smaller themes</div>`:""}</div></div>
 <div id="thm">${themesHTML()}</div></section>
+<section class="card" id="pulse" hidden></section>
 <section class="card" id="recs"><h2>Recommendations</h2><p class="hint">Evidence volume counts reviews. It does not measure how many users are affected.</p>
 ${g1.length?`<div class="grp"><b>App does not work.</b> These ${g1.length} recommendations describe one user problem and cover ${g1n} of ${o.problem_reviews} problem reviews. Read them together.</div>${g1.map(recHTML).join("")}`:""}
 ${g2.length?`<div class="grp"><b>Other problems</b></div>${g2.map(recHTML).join("")}`:""}</section>
 <section class="card"><h2>Churn signals</h2><p class="hint">Reviews where the user says they are leaving or telling others to stay away.</p>${churn.map(r=>`<div class="rv"><p>${esc(r.text)}</p><div class="mu sm">Low confidence: ${churn.length} review in this sample</div></div>`).join("")||'<p class="mu">None found in this sample.</p>'}</section>
 <section class="card"><h2>Not recommended</h2><p class="hint">Eligible groups without a recommendation, and groups too small to act on.</p><div class="chips">${(D.not_recommended||[]).map(x=>`<span title="${esc(x.reason||"")}">${esc(nice(x.name))} (${x.reviews})</span>`).join("")}${(D.weak_signals||[]).map(w=>`<span title="${esc(w.reason)}">${esc(nice(w.theme))} (${w.n})</span>`).join("")}</div></section>
-<section class="card" id="limits"><h2>Limits</h2><ul class="lim">${D.limits.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></section>
+<section class="card" id="limits"><h2>Limits</h2><ul class="lim">${D.meta.human_review?`<li>${esc(D.meta.human_review==="pending"?"Generated automatically and not yet audited by a person.":"Audited by a person on "+D.meta.human_review+".")}</li>`:""}${D.limits.map(l=>`<li>${esc(l)}</li>`).join("")}</ul></section>
 </div></div>`;
   $("#srch").oninput=e=>{q=e.target.value;revHTML()};
   $("#sel").onchange=e=>setFilter(e.target.value||null);
+  loadPulse();
   revHTML();
 }
 
+function loadPulse(){
+  fetch("pulse.json").then(r=>{if(!r.ok)throw 0;return r.json()}).then(p=>{
+    const ds=Object.keys(p.days).sort().slice(-14);if(ds.length<2)return;
+    const R=ds.map(d=>{const x=p.days[d];return{d,rev:x.reviews,pr:x.problems,c:x.themes[CR]||0}});
+    const mx=Math.max(...R.map(r=>r.pr),1),last=R.slice(-7),sum=k=>last.reduce((a,r)=>a+r[k],0);
+    const share=sum("rev")?Math.round(sum("pr")/sum("rev")*100):0,cs=sum("pr")?Math.round(sum("c")/sum("pr")*100):0;
+    const el=$("#pulse");el.hidden=false;
+    el.innerHTML=`<h2>Daily pulse</h2><p class="hint">Automatic and not audited. Counts only, no review text is shown. The themes, quotes and recommendations on this page are an audited snapshot from ${esc(D.meta.generated)}. The first and last days may be partial.</p>
+<div class="st"><span><b>${sum("rev")}</b> reviews across the latest ${last.length} days of data</span><span><b>${share}%</b> describe a problem</span><span><b>${cs}%</b> of problems: app crashes or won't open</span></div>
+<div class="pl">${R.map(r=>`<div class="pb" title="${esc(r.d)}: ${r.pr} problem reviews, ${r.c} about crashes"><span class="mu">${r.pr}</span><i style="height:${(r.pr-r.c)/mx*110}px;background:#7b8194"></i><i style="height:${r.c/mx*110}px;background:var(--ac)"></i><span class="mu">${esc(r.d.slice(5))}</span></div>`).join("")}</div>
+<p class="mu sm">Bars show problem reviews per day. Lime = app crashes or won't open, grey = other problems. Updated ${esc((p.updated||"").slice(0,10))}.</p>`;
+  }).catch(()=>{});
+}
 function setFilter(f){filter=f;$("#sel").value=f||"";$("#thm").innerHTML=themesHTML();revHTML()}
 
 document.addEventListener("click",e=>{

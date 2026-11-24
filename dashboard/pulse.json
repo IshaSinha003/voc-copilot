@@ -1,0 +1,79 @@
+{
+ "days": {
+  "2026-11-17": {
+   "reviews": 116,
+   "problems": 12,
+   "no_signal": 18,
+   "severity3": 7,
+   "churn": 3,
+   "themes": {
+    "privacy_and_data_deletion": 1,
+    "trust_or_fraud_concern": 1,
+    "app_crash_or_wont_open": 3,
+    "account_blocked_or_kyc": 3,
+    "fees_and_charges": 1,
+    "cashback_and_rewards": 1,
+    "payment_failed_or_delayed": 1,
+    "other": 1
+   }
+  },
+  "2026-11-18": {
+   "reviews": 353,
+   "problems": 37,
+   "no_signal": 60,
+   "severity3": 13,
+   "churn": 3,
+   "themes": {
+    "app_crash_or_wont_open": 8,
+    "fees_and_charges": 4,
+    "trust_or_fraud_concern": 4,
+    "payment_failed_or_delayed": 7,
+    "ads_and_clutter": 2,
+    "customer_support": 1,
+    "cashback_and_rewards": 2,
+    "other": 4,
+    "unwanted_auto_debit": 1,
+    "feature_request": 4
+   }
+  },
+  "2026-11-19": {
+   "reviews": 394,
+   "problems": 45,
+   "no_signal": 55,
+   "severity3": 20,
+   "churn": 6,
+   "themes": {
+    "account_blocked_or_kyc": 3,
+    "app_crash_or_wont_open": 10,
+    "customer_support": 2,
+    "trust_or_fraud_concern": 7,
+    "ads_and_clutter": 3,
+    "payment_failed_or_delayed": 6,
+    "privacy_and_data_deletion": 1,
+    "unwanted_auto_debit": 3,
+    "cashback_and_rewards": 2,
+    "fees_and_charges": 4,
+    "other": 4
+   }
+  },
+  "2026-11-20": {
+   "reviews": 137,
+   "problems": 16,
+   "no_signal": 28,
+   "severity3": 2,
+   "churn": 0,
+   "themes": {
+    "feature_request": 4,
+    "account_blocked_or_kyc": 2,
+    "ads_and_clutter": 1,
+    "other": 5,
+    "app_crash_or_wont_open": 1,
+    "cashback_and_rewards": 2,
+    "trust_or_fraud_concern": 1
+   }
+  }
+ },
+ "updated": "2026-11-21T06:12:35+00:00",
+ "model": "claude-haiku-4-5-20251001",
+ "note": "Automatic, not audited. Counts only. Tagged with the frozen v3 prompt."
+}

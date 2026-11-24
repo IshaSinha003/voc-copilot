@@ -13,11 +13,12 @@ load_dotenv()
 REC_MODEL = os.getenv("REC_MODEL", "claude-haiku-4-5-20251001")
 MIN_N = 3
 EXCLUDED_THEMES = {"cashback_and_rewards", "other"}
-MAX_RECS = 4
+MAX_RECS = 6
 CHURN_BONUS = 5  # PRD formula: n x mean severity + CHURN_BONUS if any churn mention
 
 data = json.load(open("data/clusters_corrected.json", encoding="utf-8"))
 reviews = {r["id"]: r for r in json.load(open("data/reviews.json", encoding="utf-8"))}
+nice = lambda k: {"app_crash_or_wont_open": "App crashes or won't open", "payment_failed_or_delayed": "Payment failed or delayed", "fees_and_charges": "Fees and charges", "account_blocked_or_kyc": "Account blocked or KYC", "trust_or_fraud_concern": "Trust or fraud concern"}.get(k, k.replace("_", " ").title())
 
 
 def priority(n, mean_sev, churn):
@@ -43,7 +44,7 @@ for t in data["themes"]:
         continue
     subs = [s for s in t["subclusters"] if s["n"] >= MIN_N]
     for src, name, definition in (
-        [(s, s["name"], s["definition"]) for s in subs] if subs else [(t, t["theme"], t["theme"].replace("_", " "))]
+        [(s, s["name"], s["definition"]) for s in subs] if subs and sum(s["n"] for s in subs) >= 0.6 * t["n"] else [(t, nice(t["theme"]), f"Largest unresolved group: {t['n']} reviews describe {t['theme'].replace('_',' ')} as their primary problem. No sub-cluster covers more than 60% of these reviews.")]
     ):
         uid = f"U{len(units) + 1}"
         units[uid] = {"id": uid, "name": name, "theme": t["theme"], "definition": definition,
@@ -69,13 +70,14 @@ RULES
 3. Do not write any digits or numbers anywhere in your text. The system adds statistics itself. Use words such as "the largest group".
 4. Do not mention unit ids (like U1) inside your text, only in cited_units.
 5. Write at most {MAX_RECS} recommendations. Combine units only when they describe the same user problem.
-6. kind: "fix" only when the reviews describe a concrete behaviour that can be fixed; "investigate" when the cause must be found first; "add_diagnostics" when users cannot say what is wrong; "monitor" for small or weak evidence.
-7. If a unit's definition says the symptom is not stated, recommend collecting diagnostics (for example crash reporting or an in-app prompt asking what went wrong), not a specific fix.
-8. unknowns: what these reviews cannot tell us (for example how many users are affected or which devices).
-9. validation_step: what the PM should check before spending roadmap space (for example crash analytics or support tickets).
-10. Plain English, short sentences.
-11. hypotheses_to_test: 0 to 2 short questions the product manager could check with data. Each must end with a question mark.
-12. The title and problem statement must describe the whole group. If a group mixes different problems, say so and recommend separating them before acting."""
+6. Prioritize by potential impact: units with more reviews or a higher share of severity 3 should get a recommendation before small or low-severity units, unless the small unit is genuinely higher-severity evidence (such as an active security or money-loss report).
+7. kind: "fix" only when the reviews describe a concrete behaviour that can be fixed; "investigate" when the cause must be found first; "add_diagnostics" when users cannot say what is wrong; "monitor" for small or weak evidence.
+8. If a unit's definition says the symptom is not stated, recommend collecting diagnostics (for example crash reporting or an in-app prompt asking what went wrong), not a specific fix.
+9. unknowns: what these reviews cannot tell us (for example how many users are affected or which devices).
+10. validation_step: what the PM should check before spending roadmap space (for example crash analytics or support tickets).
+11. Plain English, short sentences.
+12. hypotheses_to_test: 0 to 2 short questions the product manager could check with data. Each must end with a question mark.
+13. The title and problem statement must describe the whole group. If a group mixes different problems, say so and recommend separating them before acting."""
 
 TOOL = {
     "name": "record_recommendations",
@@ -177,6 +179,32 @@ for rec in get_recs(client):
                              "version_notes": [u["version_note"] for u in cited]},
                 "evidence_volume": "high" if n >= 10 else "medium" if n >= 5 else "low",
                 "quotes": quotes[:3]})
+
+# Always include the top two themes by priority, since the model tends to skip large vague groups
+wanted = ["app_crash_or_wont_open", "payment_failed_or_delayed"]
+already = {c for r in out for c in r["cited_units"]}
+for w in wanted:
+    unit = next((u for u in units.values() if u["theme"] == w and u["id"] not in already), None)
+    if unit:
+        out.append({
+            "title": f"Investigate {nice(w)} (largest unresolved group)",
+            "kind": "add_diagnostics" if "crash" in w else "investigate",
+            "user_problem": f"Users report the app crashes, closes by itself, or will not open. This is the largest group of problem reviews and covers a wide range of symptoms that have not yet been separated into specific sub-groups.",
+            "proposed_action": "Investigate using crash analytics, support tickets and backend logs to understand what is happening and separate the distinct problems within this group.",
+            "rationale": f"This group represents the highest-volume unresolved problem in this sample.",
+            "hypotheses_to_test": ["Is this one problem or several different problems with the same surface description?"],
+            "unknowns": "The actual symptom and scope. Reviews alone cannot say how many users are affected.",
+            "validation_step": "Cross-reference with crash analytics and support ticket volume before spending roadmap time.",
+            "cited_units": [unit["id"]],
+            "cited_names": [unit["name"]],
+            "evidence": {"reviews": unit["n"], "mean_severity": unit["mean_severity"],
+                         "severity3_share": unit["severity3_share"], "churn_mentions": unit["churn_count"],
+                         "priority": unit["priority"], "version_notes": [unit["version_note"]]},
+            "evidence_volume": "high" if unit["n"] >= 10 else "medium",
+            "quotes": unit["quotes"][:3],
+            "themes": [w],
+            "human_edits": ["injected: not generated by the model"],
+        })
 
 out.sort(key=lambda r: r["evidence"]["priority"], reverse=True)
 
